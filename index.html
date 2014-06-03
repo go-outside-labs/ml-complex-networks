@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Mlnet-classifying-complex-networks by mariwahl</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/mariwahl/MLNet-Classifying-Complex-Networks">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Mlnet-classifying-complex-networks</h1>
+            <h2>To use this software you can extract the data and calculate the features with: https://github.com/mariwahl/NetAna-Complex-Network-Analysis</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/mariwahl/MLNet-Classifying-Complex-Networks/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/mariwahl/MLNet-Classifying-Complex-Networks/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="mlnet---classifying-complex-networks-with-machine-learning" class="anchor" href="#mlnet---classifying-complex-networks-with-machine-learning"><span class="octicon octicon-link"></span></a>MLNet - Classifying Complex Networks with Machine Learning</h1>
+
+<h2>
+<a name="summary" class="anchor" href="#summary"><span class="octicon octicon-link"></span></a>Summary</h2>
+
+<p>The study of  complex networks pervades all of the science. We can assign complex networks into four general classes (although there is some overlap between them):  technological networks (e.g., internet, the telephone network, power grids, transportation network),  information networks (e.g., the world wide web, citation networks),   biological networks (e.g., biochemical network, neutral networks, ecological networks), and  social networks. </p>
+
+<p>Characterizing complex network's structure is a key to understand any unifying principles underlying their topology. Several previous works  have shown that many topological properties can vary for different types of system. However these works generally focus only a few characteristics at time.   In this project, we present the first part of a method to characterize complex networks by performing an extensive analysis of the global and local topological features of networks. In a  second part, these features  are used into input vectors for a SVN classifier, establishing an efficient way of learning the classification of complex networks. </p>
+
+<h2>
+<a name="data" class="anchor" href="#data"><span class="octicon octicon-link"></span></a>Data</h2>
+
+<p>To use this software you can extract the data and calculate the features with: 
+<a href="https://github.com/mariwahl/NetAna-Complex-Network-Analysis">https://github.com/mariwahl/NetAna-Complex-Network-Analysis</a></p>
+
+<p>And cleanse the data with:
+<a href="https://github.com/mariwahl/NetClean-Complex-Networks-Data-Cleanser">https://github.com/mariwahl/NetClean-Complex-Networks-Data-Cleanser</a></p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>The feature vectors were extracting using MNet:
+<a href="https://github.com/mariwahl/NetAna-Complex-Network-Analysis">https://github.com/mariwahl/NetAna-Complex-Network-Analysis</a></p>
+
+<p>We have vectors for different normalization (Snowball and Metropolis Hastings Random Walk samplings) for different sizes. We also have vectors for the entire graphs for some of the features (that were possible to be calculated).</p>
+
+<p>These vectors are parsed and cleansed using:
+<a href="https://github.com/mariwahl/NetClean-Complex-Networks-Data-Cleanser">https://github.com/mariwahl/NetClean-Complex-Networks-Data-Cleanser</a></p>
+
+<h2>
+<a name="feature-section-and-classifiers" class="anchor" href="#feature-section-and-classifiers"><span class="octicon octicon-link"></span></a>Feature Section and Classifiers</h2>
+
+<p>We perform classification of the network features using many classifiers:</p>
+
+<ul>
+<li>SVM (supervisioned)</li>
+<li>Logistic Regression (supervisioned)</li>
+<li>Adaboost (supervisioned)</li>
+<li>EM (unsupervisioned)</li>
+</ul><h2>
+<a name="analysis-and-plots" class="anchor" href="#analysis-and-plots"><span class="octicon octicon-link"></span></a>Analysis and Plots</h2>
+
+<p>The comparisons of the the many classifiers and the plots are available under each classifier's folder.</p>
+
+<h1>
+<a name="-results-" class="anchor" href="#-results-"><span class="octicon octicon-link"></span></a>***** RESULTS ******</h1>
+
+<p>We obtain excellent results for our classifiers:</p>
+
+<h2>
+<a name="1-svm-results-traintest-percentage-08" class="anchor" href="#1-svm-results-traintest-percentage-08"><span class="octicon octicon-link"></span></a>1) SVM RESULTS, (train/test PERCENTAGE: 0.8)</h2>
+
+<p>linear xmin,    atrain: 0.815,   atest: 0.809</p>
+
+<p>SVC xmin,       atrain: 0.734,   atest: 0.739</p>
+
+<p>linear gauss,   atrain: 0.821,   atest: 0.816</p>
+
+<p>SVC gauss,      atrain: 0.916,   atest: 0.914</p>
+
+<p>linear none,    atrain: 0.6,     atest: 0.611</p>
+
+<p>SVC none,       atrain: 0.998,   atest: 0.993  ---&gt; ALMOST 100% ACCURARY!!!!!</p>
+
+<h2>
+<a name="2-adaboost-results-traintest-percentage-08" class="anchor" href="#2-adaboost-results-traintest-percentage-08"><span class="octicon octicon-link"></span></a>2) ADABOOST RESULTS, (train/test PERCENTAGE: 0.8)</h2>
+
+<p>tech, xmin ,     atrain: 0.906114845197 , atest: 0.905554614733</p>
+
+<p>info, xmin ,     atrain: 0.961694628209 , atest: 0.95816045724</p>
+
+<p>social, xmin ,   atrain: 0.932485842816 , atest: 0.924731160034</p>
+
+<p>bio, xmin ,      atrain: 0.977130457793 , atest: 0.979229466554</p>
+
+<p>tech, gauss ,    atrain: 0.904228631913 , atest: 0.905944115157</p>
+
+<p>info, gauss ,    atrain: 0.959289229955 , atest: 0.955270956816</p>
+
+<p>social, gauss ,  atrain: 0.930746229161 , atest: 0.925279424217</p>
+
+<p>bio, gauss ,     atrain: 0.977036782218 , atest: 0.979362828112</p>
+
+<h2>
+<a name="3-logistic-regression-traintest-percentage-08" class="anchor" href="#3-logistic-regression-traintest-percentage-08"><span class="octicon octicon-link"></span></a>3) LOGISTIC REGRESSION, (train/test PERCENTAGE: 0.8)</h2>
+
+<p>xmin,     atrain: 0.821,   atest: 0.814</p>
+
+<p>gauss,    atrain: 0.827,   atest: 0.823   ---&gt; 83% ACCURACY</p>
+
+<p>none,     atrain: 0.745,   atest: 0.748</p>
+
+<h2>
+<a name="feature-pairwise" class="anchor" href="#feature-pairwise"><span class="octicon octicon-link"></span></a>Feature Pairwise:</h2>
+
+<p>Type   Siz   Ord   Ass   Tra   Deg   Cor   NTr   NCl   Cnu   Clu   Eco   Ecc   Dia   Bet   Den   Rad   Scl   Com   Pag   Cen </p>
+
+<p>xmin   0.145 0.545 1.0  0.34  0.845 0.585 0.655 0.0   0.32  1.0   0.0  0.505  0.465 0.715  0.97 0.54  0.45  0.0   1.0   1.0  </p>
+
+<p>gauss  0.155 0.52  1.0  0.365 0.785 0.605 0.585 0.0   0.415 1.0   0.0  0.51   0.48  0.7    0.96 0.57  0.41  0.0   1.0   1.0  </p>
+
+<p>none   0.155 0.565 1.0  0.3   0.845 0.55  0.6   0.0   0.48  1.0   0.0  0.5    0.495 0.69   0.97 0.475 0.47  0.0   1.0   1.0   </p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/mariwahl">mariwahl</a> can be found on <a href="https://github.com/mariwahl/MLNet-Classifying-Complex-Networks">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
